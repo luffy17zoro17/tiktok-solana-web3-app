@@ -1,10 +1,12 @@
-import MainView from "../components/MainView";
-import {useWallet} from "@solana/wallet-adapter-react";
+
+import { useWallet } from "@solana/wallet-adapter-react";
 import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
+import MainView from "../components/MainView";
 
 
 
-export default function Home() {
+
+export default function Home(){
 
   const {connected} = useWallet();
 

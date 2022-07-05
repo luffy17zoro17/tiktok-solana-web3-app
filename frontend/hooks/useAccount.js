@@ -1,10 +1,10 @@
-import {useEffect} from "react";
+//import {useEffect} from "react";
 import {TOKEN_PROGRAM_ID} from '@solana/spl-token';
-import {useWallet} from "@solana/wallet-adapter-react";
+import {useWallet} from '@solana/wallet-adapter-react';
 import {getProgramInstance} from '../utils/utils';
 import {SOLANA_HOST} from '../utils/const';
 
-const anchor = require("@project-serum/anchor");
+const anchor = require('@project-serum/anchor');
 
 const utf8 = anchor.utils.bytes.utf8;
 const {BN,web3} = anchor;

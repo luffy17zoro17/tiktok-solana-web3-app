@@ -1,14 +1,14 @@
-import React from 'react'
+
 import styles from '../styles/Signup.module.css';
 import {useState} from "react";
 
-const SignUp = ({signup}) => {
+export const Signup = ({signup}) => {
 
-  const [username, setUsername] = useState();
-  const [profile, setProfile] = useState();
+  const [username, setUserName] = useState('');
+  const [profile, setProfile] = useState('');
 
 
-  const SignUpClicked = () => {
+  const signUpClicked = () => {
     console.log("SIGNING UP@!");
     signup(username,profile);
   }
@@ -28,7 +28,7 @@ const SignUp = ({signup}) => {
                     <input
                       className={styles.input}
                       type='text'
-                      onChange = {e => setUsername(e.target.value)} 
+                      onChange = {e => setUserName(e.target.value)} 
                     />  
                </div>
             </div>
@@ -47,12 +47,10 @@ const SignUp = ({signup}) => {
         </div>
 
         <div className={styles.loginButton}
-         onClick={SignUpClicked}>
+         onClick={signUpClicked}>
             Sign up
-        </div>
-        
+        </div>     
     </div>
   );
 }
 
-export default SignUp;
